@@ -68,7 +68,6 @@ const NavLinksMobile = () => {
                                 </li>
                             ))}
                         </ul>
-                    </motion.div>
                 )}
             </AnimatePresence>
         </div>
