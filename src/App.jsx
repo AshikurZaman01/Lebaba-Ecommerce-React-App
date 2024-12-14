@@ -1,7 +1,12 @@
+import { Outlet } from "react-router-dom"
+import Navbar from "./Components/Commons/Navbar/Navbar"
 
 const App = () => {
   return (
-    <div >App</div>
+    <div>
+      <Navbar></Navbar>
+      <Outlet></Outlet>
+    </div>
   )
 }
 
