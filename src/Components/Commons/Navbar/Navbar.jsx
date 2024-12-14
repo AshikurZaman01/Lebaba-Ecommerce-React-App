@@ -15,13 +15,9 @@ const Navbar = () => {
                 <NavLinks></NavLinks>
 
 
-                <div className="flex-1 ">
 
-                    <div className="flex items-center justify-center px-10">
-                        <Logo></Logo>
-                        <NavIcons></NavIcons>
-                    </div>
-                </div>
+                <Logo></Logo>
+                <NavIcons></NavIcons>
 
                 <NavLinksMobile></NavLinksMobile>
             </nav>

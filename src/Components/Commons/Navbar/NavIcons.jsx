@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 const NavIcons = () => {
     return (
-        <div className="flex-1 flex items-center justify-center gap-[2rem] relative ml-20">
+        <div className="flex-1 flex items-center justify-center gap-[2rem] relative ml-0">
 
             <span>
                 <Link to={'/search'}><IoSearch /></Link>
