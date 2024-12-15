@@ -5,7 +5,11 @@ const App = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <Outlet></Outlet>
+
+      <div className="max-w-screen-xl mx-auto px-[1rem]">
+        <Outlet></Outlet>
+      </div>
+
     </div>
   )
 }

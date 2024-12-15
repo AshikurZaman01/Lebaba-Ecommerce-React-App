@@ -19,7 +19,10 @@ const Navbar = () => {
                 <Logo></Logo>
                 <NavIcons></NavIcons>
 
+                {/* sidebar for mobile */}
                 <NavLinksMobile></NavLinksMobile>
+                {/* sidebar for mobile */}
+
             </nav>
 
         </header>
