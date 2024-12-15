@@ -17,7 +17,7 @@ const HeroSection = () => {
                     cards.map((item) => (
                         <div
                             key={item.id}
-                            className="relative overflow-hidden group rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105"
+                            className="relative overflow-hidden group rounded-lg shadow-lg transform transition-all duration-300 "
                         >
                             <img
                                 src={item.image}
@@ -25,7 +25,7 @@ const HeroSection = () => {
                                 className="w-full h-full object-cover transition-all duration-500 group-hover:opacity-80"
                             />
 
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60  transition-opacity duration-300"></div>
 
                             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-8 px-6 py-4 text-center text-white">
 
