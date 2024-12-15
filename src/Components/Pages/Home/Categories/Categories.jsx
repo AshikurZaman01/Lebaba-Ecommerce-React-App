@@ -5,6 +5,7 @@ import categoriesImg3 from '../../../../assets/images/category-3.jpg';
 import categoriesImg4 from '../../../../assets/images/category-4.jpg';
 
 const Categories = () => {
+
     const categories = [
         { id: 1, name: "Accessories", path: "accessories", image: categoriesImg1 },
         { id: 2, name: "Dress Collection", path: "dressCollection", image: categoriesImg2 },
