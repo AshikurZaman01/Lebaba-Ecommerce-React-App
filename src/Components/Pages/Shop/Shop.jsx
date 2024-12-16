@@ -1,7 +1,10 @@
+import TrendingProducts from "./TrendingProducts/TrendingProducts"
 
 const Shop = () => {
     return (
-        <div>Shop</div>
+        <div>
+            <TrendingProducts />
+        </div>
     )
 }
 
