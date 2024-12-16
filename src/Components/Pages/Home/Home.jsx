@@ -1,3 +1,4 @@
+import DealSection from "../DealSection/DealSection"
 import TrendingProducts from "../Shop/TrendingProducts/TrendingProducts"
 import Banner from "./Banner/Banner"
 import Categories from "./Categories/Categories"
@@ -14,6 +15,8 @@ const Home = () => {
             <HeroSection></HeroSection>
 
             <TrendingProducts></TrendingProducts>
+
+            <DealSection></DealSection>
 
         </div>
     )

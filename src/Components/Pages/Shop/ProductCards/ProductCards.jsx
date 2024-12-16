@@ -3,13 +3,18 @@ import { Link } from "react-router-dom";
 import RatingStar from "./RatingStar";
 
 const ProductCards = ({ productsData }) => {
+
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
       {productsData.map((product, index) => (
+
         <div
           key={index}
           className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
         >
+
           <div className="relative">
             <Link to={`/shop/${product.id}`}>
               <img
@@ -24,6 +29,7 @@ const ProductCards = ({ productsData }) => {
               </button>
             </div>
           </div>
+
           <div className="text-center p-6">
             <h4 className="text-xl font-semibold text-gray-800">{product.name}</h4>
             <p className="text-lg text-gray-600 mt-2">
@@ -32,8 +38,11 @@ const ProductCards = ({ productsData }) => {
                 <span className="text-sm text-gray-400 line-through">${product.oldPrice}</span>
               )}
             </p>
+
             <RatingStar rating={product.rating} />
+
           </div>
+
         </div>
       ))}
     </div>
@@ -41,4 +50,3 @@ const ProductCards = ({ productsData }) => {
 };
 
 export default ProductCards;
-    

@@ -32,6 +32,8 @@ const TrendingProducts = () => {
                     </button>
                 )}
             </div>
+
+            
         </div>
     );
 };
