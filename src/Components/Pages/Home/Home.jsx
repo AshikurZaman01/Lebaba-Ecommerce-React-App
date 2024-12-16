@@ -1,4 +1,6 @@
+import Blogs from "../Blogs/Blogs"
 import DealSection from "../DealSection/DealSection"
+import Services from "../Services/Services"
 import TrendingProducts from "../Shop/TrendingProducts/TrendingProducts"
 import Banner from "./Banner/Banner"
 import Categories from "./Categories/Categories"
@@ -17,6 +19,10 @@ const Home = () => {
             <TrendingProducts></TrendingProducts>
 
             <DealSection></DealSection>
+
+            <Services></Services>
+
+            <Blogs></Blogs>
 
         </div>
     )

@@ -2,7 +2,6 @@ import dealsImage from '../../../../src/assets/images/deals.png';
 import Countdown from './Countdown';
 
 const DealSection = () => {
-
     const targetDate = new Date();
     targetDate.setDate(targetDate.getDate() + 15);
 
@@ -30,3 +29,4 @@ const DealSection = () => {
 };
 
 export default DealSection;
+    
