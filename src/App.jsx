@@ -8,12 +8,13 @@ const App = () => {
       <Navbar></Navbar>
 
       <div className="max-w-screen-xl mx-auto px-[1rem]">
+       
         <Outlet></Outlet>
-
         <Footer></Footer>
+        
       </div>
 
-   
+
 
     </div>
   )

@@ -8,9 +8,9 @@ const Categories = () => {
 
     const categories = [
         { id: 1, name: "Accessories", path: "accessories", image: categoriesImg1 },
-        { id: 2, name: "Dress Collection", path: "dressCollection", image: categoriesImg2 },
+        { id: 2, name: "Dress Collection", path: "dress", image: categoriesImg2 },
         { id: 3, name: "Jewellery", path: "jewellery", image: categoriesImg3 },
-        { id: 4, name: "Cosmetecs", path: "cosmotecs", image: categoriesImg4 },
+        { id: 4, name: "Cosmetecs", path: "cosmetics", image: categoriesImg4 },
     ];
 
     return (

@@ -5,17 +5,23 @@ import UsefulLinks from "./UsefulLinks"
 
 const Footer = () => {
     return (
-        <footer className="section__container footer__container">
+        <div>
+            <footer className="section__container footer__container">
 
-            <ContactInfo></ContactInfo>
+                <ContactInfo></ContactInfo>
 
-            <Company></Company>
+                <Company></Company>
 
-            <UsefulLinks></UsefulLinks>
+                <UsefulLinks></UsefulLinks>
 
-            <InstagramFooter></InstagramFooter>
+                <InstagramFooter></InstagramFooter>
 
-        </footer>
+            </footer>
+
+            <p className="text-center mb-10">© {new Date().getFullYear()} Lebaba. All Rights Reserved.</p>
+
+
+        </div>
     )
 }
 
