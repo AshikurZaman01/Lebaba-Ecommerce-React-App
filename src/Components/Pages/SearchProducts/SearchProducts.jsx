@@ -3,62 +3,63 @@ import productsData from "../../../assets/data/products.json";
 import ProductCards from "../Shop/ProductCards/ProductCards";
 
 const SearchProducts = () => {
+
     const [searchQuery, setSearchQuery] = useState("");
-    const [filteredProducts, setFilteredProducts] = useState(productsData);  // Initialize with all products
+    const [filteredProducts, setFilteredProducts] = useState(productsData);
 
     useEffect(() => {
         if (searchQuery === "") {
-            setFilteredProducts(productsData); // Show all products if no search query
+            setFilteredProducts(productsData);
         } else {
             const filtered = productsData.filter(
                 (product) =>
                     product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                     product.category.toLowerCase().includes(searchQuery.toLowerCase())
             );
-            setFilteredProducts(filtered); // Filtered products based on search
+            setFilteredProducts(filtered);
         }
-    }, [searchQuery]); // Runs whenever searchQuery changes
+    }, [searchQuery]);
 
     return (
         <>
-            {/* Section for heading and subheader */}
-            <section className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white py-12">
-                <div className="max-w-7xl mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-extrabold capitalize">Search Products</h2>
-                    <p className="mt-4 text-lg max-w-2xl mx-auto">
-                        Browse a diverse range of categories, from chic dresses to versatile accessories. Elevate your style today!
+            <section className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white py-16">
+                <div className="max-w-7xl mx-auto px-6 text-center">
+                    <h2 className="text-4xl font-extrabold tracking-tight">Search Products</h2>
+                    <p className="mt-4 text-xl max-w-2xl mx-auto">
+                        Explore a wide variety of products across different categories. Find your perfect style today!
                     </p>
                 </div>
             </section>
 
-            {/* Section for search bar */}
-            <section className="bg-white py-12">
-                <div className="max-w-4xl mx-auto px-4">
+            {/* Search Section */}
+            <section className="bg-white py-16">
+                <div className="max-w-4xl mx-auto px-6">
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                         <input
                             type="text"
-                            placeholder="Search For Products..."
+                            placeholder="Search for products..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full md:w-3/4 p-3 rounded-xl shadow-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300"
+                            className="w-full md:w-3/4 p-4 rounded-xl shadow-md border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300 placeholder:text-gray-500"
                         />
+
                         <button
-                            onClick={() => setSearchQuery(searchQuery)} // Trigger re-filter when search button is clicked
-                            className="w-full md:w-auto py-3 px-8 bg-indigo-600 text-white rounded-xl shadow-lg hover:bg-indigo-700 transition-all duration-300"
+                            onClick={() => setSearchQuery(searchQuery)}
+                            className="w-full md:w-auto py-4 px-8 bg-indigo-600 text-white rounded-xl shadow-md hover:bg-indigo-700 transition-all duration-300"
                         >
                             Search
                         </button>
                     </div>
-
-                    {/* Display filtered products */}
-
                 </div>
+            </section>
 
-                <div className="mt-20">
+            {/* Product Results Section */}
+            <section className="bg-gray-50 py-16">
+                <div className="max-w-7xl mx-auto px-6">
                     {filteredProducts.length > 0 ? (
                         <ProductCards productsData={filteredProducts} />
                     ) : (
-                        <p className="text-center text-gray-500 mt-4">No products found</p>
+                        <p className="text-center text-gray-500 mt-4 text-lg">No products found</p>
                     )}
                 </div>
             </section>
