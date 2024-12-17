@@ -1,9 +1,16 @@
 import { GiShoppingCart } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import RatingStar from "./RatingStar";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../../Redux/Features/Cart/cartSlice";
 
 const ProductCards = ({ productsData }) => {
 
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  }
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -26,7 +33,7 @@ const ProductCards = ({ productsData }) => {
             </Link>
 
             <div className="absolute top-3 right-3">
-              <button>
+              <button onClick={(e) => { e.stopPropagation(); handleAddToCart(product) }}>
                 <GiShoppingCart size={30} className="bg-primary p-2 rounded-full text-white hover:bg-primary-dark transition-all duration-300" />
               </button>
             </div>

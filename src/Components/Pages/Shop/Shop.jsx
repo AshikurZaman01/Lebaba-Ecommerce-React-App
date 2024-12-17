@@ -23,7 +23,8 @@ const Shop = () => {
     });
 
     const applyFilters = () => {
-        let filteredProducts = [...productsData]; // Start with the full dataset
+       
+        let filteredProducts = [...productsData]; 
 
         // Filter by category
         if (filterState.categories && filterState.categories !== 'all') {

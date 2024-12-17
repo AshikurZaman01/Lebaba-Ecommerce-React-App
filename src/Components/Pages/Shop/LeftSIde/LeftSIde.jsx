@@ -1,3 +1,4 @@
+
 const LeftSide = ({ filterProducts, filterState, setFilterState, clearFilters }) => {
     return (
         <div className="bg-white p-6 rounded-lg shadow-md w-full md:w-80 space-y-6">
@@ -70,6 +71,7 @@ const LeftSide = ({ filterProducts, filterState, setFilterState, clearFilters })
             >
                 Clear Filters
             </button>
+
         </div>
     );
 };
