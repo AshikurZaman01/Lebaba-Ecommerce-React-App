@@ -16,6 +16,7 @@ const ProductCards = ({ productsData }) => {
         >
 
           <div className="relative">
+
             <Link to={`/shop/${product.id}`}>
               <img
                 src={product.image}
@@ -23,7 +24,8 @@ const ProductCards = ({ productsData }) => {
                 className="max-h-96 md:h-64 w-full object-cover transition-transform duration-500 transform hover:scale-105"
               />
             </Link>
-            <div className="absolute top-3 right-3 opacity-0 hover:opacity-100 transition-opacity duration-300">
+
+            <div className="absolute top-3 right-3">
               <button>
                 <GiShoppingCart size={30} className="bg-primary p-2 rounded-full text-white hover:bg-primary-dark transition-all duration-300" />
               </button>

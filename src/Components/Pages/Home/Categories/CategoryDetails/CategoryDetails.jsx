@@ -10,11 +10,13 @@ const CategoryDetails = () => {
 
 
     useEffect(() => {
-
         const filtered = productsData.filter((product) => product.category === categoryName.toLowerCase());
         setFilteredProducts(filtered);
-
     }, [categoryName])
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     return (
         <>
@@ -27,10 +29,9 @@ const CategoryDetails = () => {
 
             </section>
 
-            <div>
+            <div className="section__container">
                 <ProductCards productsData={filteredProducts}></ProductCards>
             </div>
-
 
         </>
     )
