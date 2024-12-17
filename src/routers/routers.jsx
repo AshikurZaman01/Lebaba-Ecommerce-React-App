@@ -5,6 +5,7 @@ import Shop from "../Components/Pages/Shop/Shop";
 import Pages from "../Components/Pages/Pages/Pages";
 import Contact from "../Components/Pages/Contact/Contact";
 import CategoryDetails from "../Components/Pages/Home/Categories/CategoryDetails/CategoryDetails";
+import SearchProducts from "../Components/Pages/SearchProducts/SearchProducts";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
             {
                 path: '/categories/:categoryName',
                 element: <CategoryDetails></CategoryDetails>
+            },
+            {
+                path: '/search',
+                element: <SearchProducts></SearchProducts>
             },
             {
                 path: '/shop',

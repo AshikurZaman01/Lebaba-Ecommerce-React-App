@@ -17,6 +17,7 @@ const Navbar = () => {
 
 
                 <Logo></Logo>
+
                 <NavIcons></NavIcons>
 
                 {/* sidebar for mobile */}
