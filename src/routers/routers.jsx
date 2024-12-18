@@ -7,6 +7,8 @@ import Contact from "../Components/Pages/Contact/Contact";
 import CategoryDetails from "../Components/Pages/Home/Categories/CategoryDetails/CategoryDetails";
 import SearchProducts from "../Components/Pages/SearchProducts/SearchProducts";
 import ProductDetails from "../Components/Pages/Shop/ProductCards/ProductDetails";
+import Login from "../Components/Pages/Login/Login";
+import Register from "../Components/Pages/Register/Register";
 
 const router = createBrowserRouter([
     {
@@ -40,9 +42,19 @@ const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact></Contact>
-            }
+            },
+
         ]
+    },
+    {
+        path: '/login',
+        element: <Login></Login>
+    },
+    {
+        path: '/register',
+        element: <Register></Register>
     }
+
 ])
 
 export default router;

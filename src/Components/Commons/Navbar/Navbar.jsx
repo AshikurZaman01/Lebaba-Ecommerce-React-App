@@ -6,7 +6,6 @@ import NavLinksMobile from "./NavLinks/NavLinksMobile";
 const Navbar = () => {
 
 
-
     return (
         <header className="fixed-nav-bar w-nav">
 
