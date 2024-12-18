@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import productsData from "../../../assets/data/products.json";
 import ProductCards from "./ProductCards/ProductCards";
-import LeftSide from "./LeftSide/LeftSide";
+import LeftSide from "./LeftSIdePortion/LeftSide";
 
 const filterProducts = {
     categories: ['all', 'accessories', 'dress', 'jewellery', 'cosmetics'],
