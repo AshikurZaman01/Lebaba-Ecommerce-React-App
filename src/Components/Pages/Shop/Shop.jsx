@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import productsData from "../../../assets/data/products.json";
 import ProductCards from "./ProductCards/ProductCards";
+import Left from "./LeftSIdePortion/Left";
 
 const filterProducts = {
     categories: ['all', 'accessories', 'dress', 'jewellery', 'cosmetics'],
@@ -22,8 +23,8 @@ const Shop = () => {
     });
 
     const applyFilters = () => {
-       
-        let filteredProducts = [...productsData]; 
+
+        let filteredProducts = [...productsData];
 
         // Filter by category
         if (filterState.categories && filterState.categories !== 'all') {
@@ -68,7 +69,12 @@ const Shop = () => {
             <section className="container mx-auto my-8 px-4">
                 <div className="flex flex-col md:flex-row gap-8">
                     {/* Left Side Filters */}
-                  
+                    <Left
+                        filterProducts={filterProducts}
+                        filterState={filterState}
+                        setFilterState={setFilterState}
+                        clearFilters={clearFilters}
+                    />
 
                     {/* Right Side Products */}
                     <div className="flex-1">
